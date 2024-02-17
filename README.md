@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/elisilk/four-card-feature-section](https://github.com/elisilk/four-card-feature-section)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://elisilk.github.io/four-card-feature-section/](https://elisilk.github.io/four-card-feature-section/)
 
 ## My process
 
@@ -45,53 +45,74 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I can't take credit for this solution, as I just followed along with Kevin Powell's [YouTube video](https://youtu.be/JFbxl_VmIx0?si=xBqWtxCKLFNJ768b) that talked aloud as he developed his solution to the challenge. But even though it was his solution, th overall thinking and organization were definitely things I learned.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I loved the way Kevin set up his CSS custom variables, primarily in the _root_ but also some within some specific selectors. Here is the _root_ setup:
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  --ff-sans: "Poppins", sans-serif;
+
+  --fw-light: 200;
+  --fw-normal: 400;
+  --fw-bold: 600;
+
+  --fs-400: 0.9375rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.625rem;
+  --fs-900: 2.5rem;
+
+  --clr-neutral-100: hsl(0, 0%, 98%);
+  --clr-neutral-400: hsl(229, 6%, 66%);
+  --clr-neutral-900: hsl(234, 12%, 34%);
+
+  --clr-teal: hsl(180deg 63% 54%);
+  --clr-red: hsl(360deg 79% 62%);
+  --clr-blue: hsl(212deg 83% 63%);
+  --clr-yellow: hsl(33deg 96% 64%);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+I also learned about organizing a basic HTML component, like a [card](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card):
+
+```html
+<div class="card border-teal">
+  <h2 class="card__title">Supervisor</h2>
+  <p>Monitors activity to identify project roadblocks</p>
+  <img class="card__img" src="images/icon-supervisor.svg" alt="" />
+</div>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+And how to use _divs_ effectively for a single purpose, such as wrapper, layout, and column.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```html
+<div class="wrapper">
+  <div class="layout-grid">
+    <div class="col">
+      <div class="card border-teal">
+        <h2 class="card__title">Supervisor</h2>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img class="card__img" src="images/icon-supervisor.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+There is definitely much to learn. For the interesting layout of the cards in the desktop view, Kevin implemented both a flex and grid solution. It was nice to see both solutions. Although the grid solution uses less markup, the flex solution feels a little more straightforward in terms of how the design was intended to be laid out. But not sure. Need to consider this more and understand how to use both flex and grid, and under what conditions each are more appropriate.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Responsive layout practice for beginners](https://youtu.be/JFbxl_VmIx0?si=xBqWtxCKLFNJ768b) - This YouTube video by Kevin Powell, in which he talks aloud while solving this particular Frontend Mentor challenge. Clearly, this one was a big help.
+- [MDN Web Docs for CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Went here a lot to reference the different CSS properties and the shorthands, and all the great explanations about best practices.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Eli Silk](https://github.com/elisilk)
+- Frontend Mentor - [@elisilk](https://www.frontendmentor.io/profile/elisilk)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I definitely want to acknowledge [Kevin Powell](https://www.kevinpowell.co/). Kevin's email newsletter inspired me to give Frontend Mentor a try, and his YouTube video walking through this solution was the hand holding I needed to get started.

@@ -18,9 +18,9 @@
   --fs-600: 1.625rem;
   --fs-900: 2.5rem;
 
-  --clr-neutral-900: hsl(234, 12%, 34%);
-  --clr-neutral-400: hsl(229, 6%, 66%);
   --clr-neutral-100: hsl(0, 0%, 98%);
+  --clr-neutral-400: hsl(229, 6%, 66%);
+  --clr-neutral-900: hsl(234, 12%, 34%);
 
   --clr-teal: hsl(180deg 63% 54%);
   --clr-red: hsl(360deg 79% 62%);
