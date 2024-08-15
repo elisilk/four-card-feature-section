@@ -26,7 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+|  Mobile designed at 375px:   |  Desktop designed at 1440px:  |
+| :--------------------------: | :---------------------------: |
+| ![](./screenshot-mobile.png) | ![](./screenshot-desktop.png) |
 
 ### Links
 
@@ -45,9 +47,11 @@ Users should be able to:
 
 ### What I learned
 
-I can't take credit for this solution, as I just followed along with Kevin Powell's [YouTube video](https://youtu.be/JFbxl_VmIx0?si=xBqWtxCKLFNJ768b) that talked aloud as he developed his solution to the challenge. But even though it was his solution, th overall thinking and organization were definitely things I learned.
+I can't take credit for this solution, as I just followed along with Kevin Powell's [YouTube video](https://youtu.be/JFbxl_VmIx0?si=xBqWtxCKLFNJ768b) that talked aloud as he developed his solution to the challenge. But even though it was his solution, the overall thinking and organization were definitely things I learned.
 
-I loved the way Kevin set up his CSS custom variables, primarily in the _root_ but also some within some specific selectors. Here is the _root_ setup:
+After doing a few challenges on my own, I came back and revisited this one and made some significant changes based on my own preferences. And I tried to better match the design, whereas Kevin was okay having it be in the right ballpark.
+
+I loved the way Kevin set up his CSS custom variables, primarily in the _root_ but also some within some specific selectors. Here is my updated _root_ setup:
 
 ```css
 :root {
@@ -57,10 +61,11 @@ I loved the way Kevin set up his CSS custom variables, primarily in the _root_ b
   --fw-normal: 400;
   --fw-bold: 600;
 
-  --fs-400: 0.9375rem;
-  --fs-500: 1.25rem;
-  --fs-600: 1.625rem;
-  --fs-900: 2.5rem;
+  --fs-400: 0.8125rem; /* 13px - card text */
+  --fs-500: 0.9375rem; /* 15px - header text */
+  --fs-600: 1.25rem; /* 20px - card title */
+  --fs-700: 1.5rem; /* 24px - h1 mobile */
+  --fs-900: 2.25rem; /* 36px - h1 desktop */
 
   --clr-neutral-100: hsl(0, 0%, 98%);
   --clr-neutral-400: hsl(229, 6%, 66%);
