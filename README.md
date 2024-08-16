@@ -44,12 +44,13 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Fluid typography
 
 ### What I learned
 
 I can't take credit for this solution, as I just followed along with Kevin Powell's [YouTube video](https://youtu.be/JFbxl_VmIx0?si=xBqWtxCKLFNJ768b) that talked aloud as he developed his solution to the challenge. But even though it was his solution, the overall thinking and organization were definitely things I learned.
 
-After doing a few challenges on my own, I came back and revisited this one and made some significant changes based on my own preferences. And I tried to better match the design, whereas Kevin was okay having it be in the right ballpark.
+After doing a few challenges on my own, I came back and revisited this one and made some significant changes based on my own preferences. And I tried to better match the design, whereas Kevin was okay having it be in the right ballpark. I also implemented [fluid typography](https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/), taking advantage of [this cool calculator tool](https://royalfig.github.io/fluid-typography-calculator/).
 
 I loved the way Kevin set up his CSS custom variables, primarily in the _root_ but also some within some specific selectors. Here is my updated _root_ setup:
 
