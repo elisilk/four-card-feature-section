@@ -62,8 +62,7 @@ body {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   color: var(--clr-neutral-900);
   line-height: 1.33;
 }
@@ -92,6 +91,7 @@ header {
 h1 {
   font-weight: var(--fw-light);
   font-size: var(--fs-700);
+  font-size: clamp(var(--fs-700), 1.05rem + 1.5vw, var(--fs-900));
   letter-spacing: 0.17px;
 }
 
@@ -183,8 +183,7 @@ main {
   }
 
   h1 {
-    font-weight: var(--fw-light);
-    font-size: var(--fs-900);
+    /* font-size: var(--fs-900); */
     letter-spacing: 0.25px;
   }
 
