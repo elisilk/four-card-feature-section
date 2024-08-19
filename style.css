@@ -118,16 +118,7 @@ main {
   --gap: 1.5rem; /* 24px; */
   display: grid;
   gap: var(--gap);
-}
-
-.layout-grid > * {
-  flex: 1;
-}
-
-.col {
-  display: grid;
-  align-content: center;
-  gap: var(--gap);
+  align-items: center;
 }
 
 .card {
@@ -161,23 +152,27 @@ main {
   height: auto;
 }
 
-.border-teal {
+.card--teal {
   border-color: var(--clr-teal);
 }
-.border-red {
+.card--red {
   border-color: var(--clr-red);
 }
-.border-yellow {
+.card--yellow {
   border-color: var(--clr-yellow);
 }
-.border-blue {
+.card--blue {
   border-color: var(--clr-blue);
 }
 
 @media (min-width: 50rem) {
   .layout-grid {
-    --gap: 30px;
-    display: flex;
+    --gap: 1.875rem; /* 30px */
+    grid: repeat(2, 1fr) / auto-flow 1fr;
+  }
+
+  .card--span-2-rows {
+    grid-row: 1 / span 2;
   }
 
   header {

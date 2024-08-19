@@ -82,32 +82,31 @@ I loved the way Kevin set up his CSS custom variables, primarily in the _root_ b
 I also learned about organizing a basic HTML component, like a [card](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card):
 
 ```html
-<div class="card border-teal">
+<div class="card card--teal card--span-2-rows">
   <h2 class="card__title">Supervisor</h2>
   <p>Monitors activity to identify project roadblocks</p>
   <img class="card__img" src="images/icon-supervisor.svg" alt="" />
 </div>
 ```
 
-And how to use _divs_ effectively for a single purpose, such as wrapper, layout, and column.
+And how to use _divs_ effectively for a single purpose, such as a wrapper to control the inline positioning and padding and a layout `div` that controls the positioning and gaps of the child elements within (in this case, using grid).
 
 ```html
 <div class="wrapper">
   <div class="layout-grid">
-    <div class="col">
-      <div class="card border-teal">
-        <h2 class="card__title">Supervisor</h2>
-        <p>Monitors activity to identify project roadblocks</p>
-        <img class="card__img" src="images/icon-supervisor.svg" alt="" />
-      </div>
-    </div>
+    <div class="card card--teal card--span-2-rows">...</div>
+    <div class="card card--red">...</div>
+    <div class="card card--yellow">...</div>
+    <div class="card card card--blue card--span-2-rows">...</div>
   </div>
 </div>
 ```
 
+Thank you to [@xphstos](https://www.frontendmentor.io/profile/xphstos) for the [comment on my earlier solution](https://www.frontendmentor.io/solutions/solution-with-flex-layout-and-css-custom-properties-0RncKYpReC) that encouraged me to update how I implemented the layout grid and get rid of an extra `div` that wasn't really needed. It also encouraged me to look up and get more familiar with the [`grid` shortcode](https://developer.mozilla.org/en-US/docs/Web/CSS/grid), which was fun.
+
 ### Continued development
 
-There is definitely much to learn. For the interesting layout of the cards in the desktop view, Kevin implemented both a flex and grid solution. It was nice to see both solutions. Although the grid solution uses less markup, the flex solution feels a little more straightforward in terms of how the design was intended to be laid out. But not sure. Need to consider this more and understand how to use both flex and grid, and under what conditions each are more appropriate.
+There is definitely much to learn. For the interesting layout of the cards in the desktop view, Kevin implemented both a flex and grid solution. It was nice to see both solutions. Although the grid solution uses less markup, the flex solution feels a little more straightforward in terms of how the design was intended to be laid out. But not sure. Need to consider this more and understand how to use both flex and grid, and under what conditions each are more appropriate. Ultimately, I am happy that I revisited this and ended up putting together my own `grid` solution that doesn't rely on grid areas and instead uses the [`grid-auto-flow` property](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow) so that the cards are filled in by column and then I can specify that some should span two columns and so they all fall into line.
 
 ### Useful resources
 
